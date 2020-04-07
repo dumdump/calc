@@ -7,9 +7,9 @@
   <body>
     <script>
       var addBy = 4;
-      var div = document.createElement("div");
       for (var i = 0; i < 170; i += addBy) {
-        div.appendChild(i);
+        var div = document.createElement("div");
+        div = i;
         document.body.appendChild(div);
       };  
     </script>
