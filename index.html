@@ -18,15 +18,15 @@
       var submit = document.getElementById('submit');
       var total = document.getElementById('results');
       submit.addEventListener("click", function() {
-        for (var i = 0; i < parseFloat(until.value); i += parseFloat(addBy.value)) {
+        for (var i = 0; i <= parseFloat(until.value); i += parseFloat(addBy.value)) {
           var div = document.createTextNode(i + ", ");
           if (i != 0) {
             document.body.appendChild(div);
             count++
           } 
         }
+        total.textContent = "Total: " + count
       });
-      total.textContent = "Total: " + count;
     </script>
   </body>
 </html>
