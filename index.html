@@ -7,15 +7,17 @@
   <body>
     <div id = "results"></div>
     <script>
-      var count = -1;
+      var count = 0;
       var addBy = 18;
       var until = 100
       var total = document.getElementById('results');
       function calcMultiples(x, y) {
         for (var i = 0; i < x; i += y) {
           var div = document.createTextNode(i + ", ");
-          document.body.appendChild(div);
-          count++
+          if (i != 0) {
+            document.body.appendChild(div);
+            count++
+          } 
         }
       }; 
       calcMultiples(until, addBy);
