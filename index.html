@@ -26,7 +26,7 @@
           } 
         }
       }; 
-      submit.addEventListener("click", calcMultiples(until.value, addBy.value))
+      submit.addEventListener("click", calcMultiples(parseFloat(until.value), parseFloat(addBy.value)))
       total.textContent = "Total: " + count;
     </script>
   </body>
