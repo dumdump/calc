@@ -5,16 +5,19 @@
     <meta charset = "UTF-8">
   </head>
   <body>
-    <div></div>
+    <div id = "results"></div>
     <script>
       var count = -1;
       var addBy = 18;
-      var total = document.getElementsByTagName('div')
-      for (var i = 0; i < 1000; i += addBy) {
-        var div = document.createTextNode(i + ", ");
-        document.body.appendChild(div);
-        count++
-      };  
+      var until = 100
+      var total = document.getElementById('results');
+      function calcMultiples() {
+        for (var i = 0; i < 100; i += addBy) {
+          var div = document.createTextNode(i + ", ");
+          document.body.appendChild(div);
+          count++
+        }
+      }; 
       total.textContent = "Total: " + count;
     </script>
   </body>
