@@ -11,13 +11,14 @@
       var addBy = 18;
       var until = 100
       var total = document.getElementById('results');
-      function calcMultiples() {
-        for (var i = 0; i < 100; i += addBy) {
+      function calcMultiples(x, y) {
+        for (var i = 0; i < x; i += y) {
           var div = document.createTextNode(i + ", ");
           document.body.appendChild(div);
           count++
         }
       }; 
+      calcMultiples(until, addBy);
       total.textContent = "Total: " + count;
     </script>
   </body>
