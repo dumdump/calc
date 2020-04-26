@@ -17,16 +17,15 @@
       var until = document.getElementById('until');
       var submit = document.getElementById('submit');
       var total = document.getElementById('results');
-      function calcMultiples(x, y) {
-        for (var i = 0; i < x; i += y) {
+      submit.addEventListener("click", function() {
+        for (var i = 0; i < parseFloat(until.value); i += parseFloat(addBy.value)) {
           var div = document.createTextNode(i + ", ");
           if (i != 0) {
             document.body.appendChild(div);
             count++
-          } 
-        }
-      }; 
-      submit.addEventListener("click", calcMultiples(parseFloat(until.value), parseFloat(addBy.value)))
+          }; 
+        };
+      };)
       total.textContent = "Total: " + count;
     </script>
   </body>
