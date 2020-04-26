@@ -8,11 +8,14 @@
     <input id = "add-by" type = "number" placeholder = "Add By...">
     <br>
     <input id = "until" type = "number" placeholder = "Until...">
+    <br>
+    <button id = "submit">Calculate</button>
     <div id = "results"></div>
     <script>
       var count = 0;
       var addBy = document.getElementById('add-by').value;
       var until = document.getElementById('until').value;
+      var submit = document.getElementById('submit');
       var total = document.getElementById('results');
       function calcMultiples(x, y) {
         for (var i = 0; i < x; i += y) {
@@ -23,7 +26,7 @@
           } 
         }
       }; 
-      calcMultiples(until, addBy);
+      submit.addEventListener("click", calcMultiples(until, addBy))
       total.textContent = "Total: " + count;
     </script>
   </body>
